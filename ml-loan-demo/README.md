@@ -1,4 +1,4 @@
-pip install pandas scikit-learn matplotlib python-dotenv
+pip install pandas scikit-learn matplotlib python-dotenv pickle
 pip freeze > requirements.txt
 
 
