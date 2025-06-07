@@ -10,7 +10,7 @@ from dotenv import load_dotenv
 load_dotenv(".env.prod")
 # data_path = os.getenv("DATA_PATH")
 
-data_path = "./ml-loan-demo/data/loan_data_dev.csv"
+data_path = "./data/loan_data_dev.csv"
 
 df = pd.read_csv(data_path)
 df = pd.get_dummies(df, drop_first=True)
@@ -36,7 +36,7 @@ print(f"MAE: {mae:.2f}")
 print(f"R² Score: {r2:.2f}")
 
 os.makedirs("model", exist_ok=True)
-with open("ml-loan-demo/model/loan_model.pkl", "wb") as f:
+with open("./model/loan_model.pkl", "wb") as f:
     pickle.dump(model, f)
 
-print("\n✅ Model saved to ml-loan-demo/model/loan_model.pkl")
+print("\n✅ Model saved to ./model/loan_model.pkl")
